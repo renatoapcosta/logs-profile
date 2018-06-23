@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+ 		
+	
+	<!--
+	<profiles>
+	    <profile>
+	      <id>develop</id>
+	      <activation>
+		    <activeByDefault>true</activeByDefault>
+	       </activation>
+	      <repositories>
+		<repository>
+		  <id>spring_plugins</id>
+		  <name>Spring Plugins</name>
+		  <url>http://repo.spring.io/plugins-release/</url>	 
+		</repository>
+	      </repositories>
+	  </profile>
+	</profiles> 
+-->
+
+	<!--
+	  <activeProfiles>
+	    <activeProfile>default</activeProfile>
+	  </activeProfiles>
+	-->
+	
+	<!--
+	   Tem prioridade sobre a tag activeProfiles
+	   Tem prioridade sobre a tag profiles dentro do pom.xml
+	-->
+	<profiles>
+		<profile>
+		    <id>dev</id>
+		    <activation>
+		    	<activeByDefault>true</activeByDefault>
+		    </activation>		    
+		    <properties>
+		        <spring.profiles.active>dev</spring.profiles.active>		        
+		    </properties>		    
+		</profile> 
+	</profiles>
+	
+	
+
+</settings>
